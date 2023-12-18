@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macro Nutrient Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Macro Nutrient Calculator</h1>
+    <div>
+      <div class="form-group">
+        <label for="calories">Total Daily Calories:</label>
+        <input type="number" id="calories" placeholder="Enter total daily calories">
+      </div>
+      <div class="form-group">
+        <label for="goal">Fitness Goal:</label>
+        <select id="goal">
+          <option value="lose">Lose Weight</option>
+          <option value="maintain">Maintain Weight</option>
+          <option value="gain">Gain Weight</option>
+        </select>
+      </div>
+      <button class="calcButton" onclick="calculateMacros()">Calculate</button>
+    </div>
+    
+    <div id="results"></div>
+  </div>
+  
+  <script>
+    function calculateMacros() {
+      const calories = document.getElementById('calories').value;
+      const goal = document.getElementById('goal').value;
+      const results = document.getElementById('results');
+  
+      if (calories) {
+        let protein, carbs, fat;
+        
+        switch (goal) {
+          case 'lose':
+            protein = calories * 0.40 / 4;
+            carbs = calories * 0.30 / 4;
+            fat = calories * 0.30 / 9;
+            break;
+          case 'maintain':
+            protein = calories * 0.30 / 4;
+            carbs = calories * 0.40 / 4;
+            fat = calories * 0.30 / 9;
+            break;
+          case 'gain':
+            protein = calories * 0.25 / 4;
+            carbs = calories * 0.50 / 4;
+            fat = calories * 0.25 / 9;
+            break;
+        }
+  
+        results.innerHTML = `
+          <h2>Your daily macro nutrients:</h2>
+          <p>Protein: ${protein.toFixed(2)}g</p>
+          <p>Carbs: ${carbs.toFixed(2)}g</p>
+          <p>Fat: ${fat.toFixed(2)}g</p>
+        `;
+      } else {
+        results.innerHTML = '<p> Please enter the total daily calories.</p>';
+      }
+    }
+  </script>
+</body>
+</html>

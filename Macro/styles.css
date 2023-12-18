@@ -1,0 +1,82 @@
+/* style.css */
+
+body {
+    font-family: monospace, monospace;
+    background-color: #393e42;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+::placeholder {
+    color: #ffffff;
+}
+  
+#goal {
+    color: #ffffffea;;
+    background-color: #d1ccc370;
+  }
+  
+  #goal option {
+    color: black; /* Text color of options */
+    background-color: #27252070;
+  }
+
+  h1 {
+    color: #F2EFE9;;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffffea;;
+  }
+  input,
+  select {
+    background-color: #d1ccc370;
+    font-family: monospace, monospace;
+    color: #ffffff;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  button {
+    font-family: monospace, monospace;
+    background-color: #597c54;
+    color: #000000;
+    padding:10px;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+    width: 22%;
+  }
+
+  button.calcButton {
+    padding: 10px; /* Smaller padding for the "Calculate" button */
+  }
+
+  h2 {
+    color: #f2efe94f;;
+    text-align: left;
+  }
+  
+  p {
+    color: #ffffff94;;
+
+  }
+ 
+  button:hover {
+    background-color: #4e6e4aa8;
+  }
