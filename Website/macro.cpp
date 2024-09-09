@@ -68,8 +68,7 @@ int main ()
             MC = MC + 250;
             lg = true;
         } else {
-            cout << "Error, ur gay";
-            lg = false; //big cummers 
+            lg = false; 
         }
     }
 
